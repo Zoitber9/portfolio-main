@@ -1,0 +1,25 @@
+@import '../../../common/styles/Variablies';
+
+.skillsInfo {
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 90px;
+  text-transform: uppercase;
+  margin-left: -0.25rem;
+  @media (max-width: 1372px) {
+    font-size: 87px
+  }
+  @media (max-width: 1328px) {
+    font-size: 90px
+  }
+  @media (max-width: 789px) {
+    font-size: 70px
+  }
+  @media (max-width: 754px) {
+    font-size: 60px
+  }
+  @media (max-width: 559px) {
+    font-size: 40px
+  }
+
+}

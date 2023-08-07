@@ -1,0 +1,105 @@
+@import "../../../common/styles/Variablies";
+
+.project {
+  width: 550px;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 20px 20px;
+  background-color: black;
+
+  .block {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .icon {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-position: center;
+      flex-direction: column;
+      transition-duration: 0.5s;
+
+      @media (max-width: 1024px) {
+        opacity: 0.2;
+        transform: scale(1.04);
+        filter: blur(2px);
+      }
+    }
+
+    .projectInfo {
+      position: absolute;
+      opacity: 0;
+      top: 15%;
+      transition-duration: 0.3s;
+      padding: 5px;
+
+      @media (max-width: 1024px) {
+        opacity: 1;
+      }
+
+      .title {
+        margin: 20px 16px;
+        color: white;
+      }
+
+      .description {
+        color: white;
+        font-weight: 400;
+      }
+
+      @media (max-width: 906px) {
+        top: 5%;
+      }
+
+      @media (max-width: 681px) {
+        top: 10%;
+      }
+    }
+  }
+
+  @media (max-width: 1650px) {
+    width: 335px;
+    height: 380px;
+  }
+
+  @media (max-width: 1350px) {
+    width: 295px;
+    height: 316px;
+  }
+
+  @media (max-width: 1200px) {
+    width: 336px;
+    height: 360px;
+  }
+
+  @media (max-width: 906px) {
+    width: 246px;
+    height: 263px;
+  }
+  @media (max-width: 681px) {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .block:hover .icon {
+    opacity: 0.2;
+    transform: scale(1.04);
+    filter: blur(2px);
+  }
+  .project:hover .projectInfo {
+    opacity: 1;
+  }
+}
+
+
+
+

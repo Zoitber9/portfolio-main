@@ -1,0 +1,24 @@
+@import '../../common/styles/Variablies';
+
+.skillsBlock {
+  min-height: 100vh;
+  background-color: $bodyBgColor;
+  display: flex;
+  align-items: center;
+
+  .skillsContainer {
+    @include container();
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    .skills {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+}

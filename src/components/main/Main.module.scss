@@ -1,0 +1,133 @@
+@import '../../common/styles/Variablies';
+
+.mainBlock {
+  min-height: 100vh;
+  background-color: $bodyBgColor;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+
+  @media (max-width: 555px) {
+    padding-top: 45px;
+  }
+
+  .mainContainer {
+    @include container();
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media (max-width: 1328px) {
+      flex-direction: column;
+    }
+
+    .text {
+      width: 57%;
+      @media (max-width: 1328px) {
+        text-align: center;
+        margin-top: 24px;
+        order: 2;
+        width: 100%;
+
+      }
+
+      h1 {
+        font-weight: 300;
+        line-height: 1.3;
+        text-transform: uppercase;
+        @media (max-width: 559px) {
+          font-size: 30px;
+        }
+        @media (max-width: 355px) {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        font-size: 21px;
+        line-height: 1.8;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        @media (max-width: 355px) {
+          font-size: 18px;
+        }
+      }
+
+      a {
+        padding: 13px 42px;
+        font-weight: 500;
+        border-width: 2px;
+        transition: all 0.5s ease;
+        line-height: 1.5;
+        text-decoration: none;
+
+        @media (max-width: 520px) {
+          display: block;
+        }
+      }
+
+      .myWorks {
+        box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+        color: $secondTextColor;
+        background-color: $bgSecondColor;
+        border-color: $textColor;
+      }
+
+      .contactMe {
+        color: $secondTextColor;
+
+        span {
+          text-decoration: underline;
+
+        }
+
+        &:hover span {
+          text-decoration: none;
+        }
+      }
+
+    }
+
+    .photo {
+      max-width: 100%;
+      align-self: center;
+      @media (max-width: 1328px) {
+        order: 1;
+      }
+
+      div {
+        visibility: visible;
+        border-radius: 50rem;
+        background-color: $bodyBgColor;
+        padding: 16px;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+        display: inline-block;
+        animation-name: zoomIn;
+
+        img {
+          height: 455px;
+          width: 455px;
+          border-radius: 50rem;
+          display: block;
+          max-width: 100%;
+          vertical-align: inherit;
+          @media (max-width: 1432px) {
+            height: 419px;
+            width: 419px;;
+          }
+          @media (max-width: 1328px) {
+            height: 455px;
+            width: 455px;
+          }
+          @media (max-width: 630px) {
+            height: 100%;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}

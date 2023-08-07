@@ -1,0 +1,33 @@
+@import '../../common/styles/Variablies';
+
+.footerBlock {
+  height: 10vh;
+  background-color: $bgColor;
+  color: white;
+  display: flex;
+  align-items: center;
+
+
+  .footerContainer {
+    @include container();
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
+
+    p {
+      line-height: 1.8;
+
+      @media (max-width: 410px) {
+        font-size: 14px;
+      }
+      @media (max-width: 360px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+

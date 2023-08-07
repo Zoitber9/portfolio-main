@@ -1,0 +1,14 @@
+$textColor: #212529;
+$secondTextColor: #fff;
+$footerColor: #111418;
+$secondTexColor: #c8cdd3;
+$bodyBgColor: #131416;
+$bgColor: #1c1d24;
+$bgSecondColor: #d37f36;
+
+@mixin container() {
+  height: 70%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}

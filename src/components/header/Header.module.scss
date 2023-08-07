@@ -1,0 +1,45 @@
+@import '../../common/styles/Variablies';
+
+.header {
+  height: 80px;
+  width: 100%;
+  display: block;
+  background-color: $bgColor;
+  position: fixed;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .2);
+  z-index: 3;
+  padding-top: 20px;
+  opacity: 0.85;
+
+  .headerContainer {
+    @include container();
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      svg {
+        height: 50px;
+        width: 50px;
+        fill: $textColor;
+        transition-duration: 0.3s;
+        @media (max-width: 650px) {
+          transition: none;
+        }
+
+        &:hover {
+          fill: $bgSecondColor;
+        }
+      }
+
+      @media (max-width: 555px) {
+        visibility: hidden;
+        position: absolute;
+      }
+    }
+
+
+  }
+  @media (max-width: 555px) {
+    height: 45px;
+  }
+}

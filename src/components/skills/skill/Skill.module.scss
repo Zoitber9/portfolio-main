@@ -1,0 +1,48 @@
+@import "../../../common/styles/Variablies";
+
+.skill {
+  width: 350px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+
+  svg {
+    height: 60px;
+    width: 60px;
+    fill: $bgSecondColor;
+    margin: 0 0 12px;
+  }
+
+  .title {
+    margin: 0 0 16px;
+  }
+
+  .description {
+    color: $secondTexColor;
+    font-weight: 400;
+  }
+
+  @media (max-width: 1331px) {
+    width: 300px;
+  }
+  @media (max-width: 1144px) {
+    width: 250px;
+  }
+  @media (max-width: 956px) {
+    width: 300px;
+  }
+  @media (max-width: 769px) {
+    width: 250px;
+  }
+  @media (max-width: 644px) {
+    width: 100%;
+  }
+}
+
+
+
+
+

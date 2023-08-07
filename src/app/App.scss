@@ -1,0 +1,52 @@
+@import "../common/styles/Variablies";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &, ::after, ::before {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: $bgSecondColor;
+    color: $bodyBgColor;
+    text-shadow: none;
+  }
+
+  body {
+    background: $bodyBgColor;
+    color: $secondTextColor;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
