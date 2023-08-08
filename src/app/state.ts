@@ -1,10 +1,10 @@
 import {LinksNameType, SkillsNameType} from "../common/svgSelector/SvgSelector";
 import bgImg from '../assets/image/intro-bg-2.jpg'
 import SocialNetworkImg from '../assets/image/SocialNet.jpg'
-import tidoListImg from '../assets/image/TodoImg.jpg';
+import todoListImg from '../assets/image/todoImg.png';
 import LearningCardsImg from '../assets/image/learnCards.jpg';
-import recommendMovies from '../assets/image/recommendMovies.jpg';
-import Me from '../assets/image/duck-secondary.jpg'
+import recommendMovies from '../assets/image/recommendMovies.png';
+import Me from '../assets/image/Man-.jpg'
 import Pizza from '../assets/image/heroPizza.jpg'
 
 const headerLinks: LinksType[] = [
@@ -61,7 +61,7 @@ export const state: StateType = {
                 {title: 'Name:', info: 'Andrey Abramchik'},
                 // {title: 'Email:', info: 'abramchik.andrey8312@gmail.com'},
                 {title: 'Date of birth:', info: '24 July, 1998'},
-                {title: 'From:', info: 'Minsk, Belarus.'},
+                {title: 'From:', info: 'Minsk, Belarus'},
             ]
         },
         skillsComponent: {
@@ -112,10 +112,10 @@ export const state: StateType = {
                     svgName: 'SASS',
                     description: 'A CSS-based metalanguage designed to increase the abstraction level of CSS code and simplify cascading style sheet files.'
                 },
-                // {
-                //     svgName: 'LESS',
-                //     description: 'Dynamic style language. It was influenced by the Sass style language, and in turn influenced its new "SCSS" syntax.'
-                // },
+                {
+                    svgName: 'LESS',
+                    description: 'Dynamic style language. It was influenced by the Sass style language, and in turn influenced its new "SCSS" syntax.'
+                },
                 {
                     svgName: 'Storybook',
                     description: 'A UI library that can be used to document components. It also allows you to organize and assemble components.'
@@ -142,6 +142,7 @@ export const state: StateType = {
             span: 'Portfolio',
             title: 'Some of my most recent projects',
             projects: [
+                //todo
                 {
                     title: 'Movies Recommendation',
                     img: recommendMovies,
@@ -150,7 +151,8 @@ export const state: StateType = {
                 },
                 {
                     title: 'Todo list',
-                    img: tidoListImg,
+                    img: todoListImg,
+
                     description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list...',
                     href: 'https://kast13l.github.io/todolist/#/todolist'
                 },
@@ -206,7 +208,9 @@ export const state: StateType = {
         }
     }
 }
-//type
+
+
+//types
 type StateType = {
     [key: string]: {
         headerComponent: HeaderComponentType

@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import styles from './Contacts.module.scss'
-import {Title} from "../../common/title/Title";
-
 import {ContactsComponentType} from "../../app/state";
 import {useForm} from "react-hook-form";
 import axios from "axios";
@@ -96,7 +94,7 @@ export function Contacts(props: ContactsPropsType) {
                                         height: '1px',
                                         color: 'red'
                                     }}>{errors.message.message}</span>}</label>
-                                <textarea {...register("message", {
+                                <textarea placeholder={'Your message'}  {...register("message", {
                                     required: contactsComponent.formError.messageError
                                 })} ></textarea>
                             </div>
