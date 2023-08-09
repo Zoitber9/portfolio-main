@@ -54,7 +54,6 @@ export function Contacts(props: ContactsPropsType) {
                         <p className={styles.tel}><a
                             style={{textDecoration: 'none', color: 'white'}}
                             href="tel:+375297202689">{contactsComponent.callLife}</a></p>
-
                         <div>
                         </div>
                     </div>
