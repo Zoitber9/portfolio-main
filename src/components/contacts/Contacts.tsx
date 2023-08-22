@@ -1,15 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState} from 'react';
 import styles from './Contacts.module.scss'
+
 import {ContactsComponentType} from "../../app/state";
 import {useForm} from "react-hook-form";
-import axios from "axios";
 import {SnackBar} from "../SnackBar/SnackBar";
+
+import emailjs from '@emailjs/browser';
 
 type ContactsPropsType = {
     contactsComponent: ContactsComponentType
 }
 
 export function Contacts(props: ContactsPropsType) {
+
 
     const {contactsComponent} = props
 
@@ -27,20 +30,21 @@ export function Contacts(props: ContactsPropsType) {
     const [error, setError] = useState<string | null>(null)
     const [success, setSuccess] = useState<string | null>(null)
 
-    const onSubmit = async (data: any) => {
+    const onSubmit = async (formData: any) => {
         setStatus('loading')
-        try {
-            const res = await axios.post('', data)
-            //todo
-            if (res) {
-            }
-            setSuccess('Message is sending! Thank you!')
-            form.reset();
-        } catch (e) {
-            setError(String(e))
-        } finally {
-            setStatus("success")
-        }
+        emailjs
+            .send("service_284rhes", "template_3r67z4c", formData, "0lZf2W5Eanm8WBNHL")
+            .then(
+                (result) => {
+                    setSuccess('Message is sending! Thank you!')
+                    form.reset();
+                },
+                (error) => {
+                    setError(String(error))
+                })
+            .finally(() => {
+                setStatus("success")
+            })
     }
 
     return (
@@ -54,6 +58,7 @@ export function Contacts(props: ContactsPropsType) {
                         <p className={styles.tel}><a
                             style={{textDecoration: 'none', color: 'white'}}
                             href="tel:+375297202689">{contactsComponent.callLife}</a></p>
+
                         <div>
                         </div>
                     </div>
@@ -62,7 +67,7 @@ export function Contacts(props: ContactsPropsType) {
                               setSuccess={setSuccess}/>
                     <div className={styles.form}>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <h4 style={{paddingLeft:'12px'}}>Contact us</h4>
+                            <h4 style={{paddingLeft: '12px'}}>Contact us</h4>
                             <div>
                                 <label>{contactsComponent.name} {errors.name &&
                                     <span style={{
@@ -93,7 +98,7 @@ export function Contacts(props: ContactsPropsType) {
                                         height: '1px',
                                         color: 'red'
                                     }}>{errors.message.message}</span>}</label>
-                                <textarea placeholder={'Your message'}  {...register("message", {
+                                <textarea {...register("message", {
                                     required: contactsComponent.formError.messageError
                                 })} ></textarea>
                             </div>
