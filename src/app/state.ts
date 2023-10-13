@@ -112,10 +112,10 @@ export const state: StateType = {
                     svgName: 'SASS',
                     description: 'A CSS-based metalanguage designed to increase the abstraction level of CSS code and simplify cascading style sheet files.'
                 },
-                {
-                    svgName: 'LESS',
-                    description: 'Dynamic style language. It was influenced by the Sass style language, and in turn influenced its new "SCSS" syntax.'
-                },
+                // {
+                //     svgName: 'LESS',
+                //     description: 'Dynamic style language. It was influenced by the Sass style language, and in turn influenced its new "SCSS" syntax.'
+                // },
                 {
                     svgName: 'Storybook',
                     description: 'A UI library that can be used to document components. It also allows you to organize and assemble components.'
@@ -142,39 +142,18 @@ export const state: StateType = {
             span: 'Portfolio',
             title: 'Some of my most recent projects',
             projects: [
-                //todo
-                {
-                    title: 'Movies Recommendation',
-                    img: recommendMovies,
-                    description: 'An application that always shows up-to-date data about movies, including their popularity...',
-                    href: 'https://serene-island-94785.herokuapp.com/'
-                },
                 {
                     title: 'Todo list',
                     img: todoListImg,
-
                     description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list...',
-                    href: 'https://kast13l.github.io/todolist/#/todolist'
+                    href: 'https://todolist-rtk-chi.vercel.app/'
                 },
                 {
                     title: 'Learning Cards',
                     img: LearningCardsImg,
                     description: 'Is a card bearing information, which is intended to be used as an aid in memorization. Flashcards are often used to memorize vocabulary, historical dates...',
-                    href: 'https://kast13l.github.io/cards-2.0'
+                    href: '/'
                 },
-                {
-                    title: 'Social Network',
-                    img: SocialNetworkImg,
-                    description: 'An online platform that is used for communication, dating, creating social relationships between people...',
-                    href: 'https://kast13l.github.io/samurai-way-main/'
-                },
-                // {
-                //     title: 'Pizza Yolla',
-                //     img: Pizza,
-                //     description: 'Online pizza ordering application. (Currently under development)',
-                //     href: 'https://pizzayolla.store/'
-                // },
-
             ]
         },
         distantWorkComponent: {

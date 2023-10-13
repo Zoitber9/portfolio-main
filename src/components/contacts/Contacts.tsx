@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import styles from './Contacts.module.scss'
 
 import {ContactsComponentType} from "../../app/state";
