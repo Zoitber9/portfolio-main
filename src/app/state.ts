@@ -1,11 +1,9 @@
 import {LinksNameType, SkillsNameType} from "../common/svgSelector/SvgSelector";
 import bgImg from '../assets/image/intro-bg-2.jpg'
-import SocialNetworkImg from '../assets/image/SocialNet.jpg'
 import todoListImg from '../assets/image/todoImg.png';
 import LearningCardsImg from '../assets/image/learnCards.jpg';
-import recommendMovies from '../assets/image/recommendMovies.png';
+import typingTestImg from '../assets/image/Test-Typing-speed-e1565596942870.jpg'
 import Me from '../assets/image/Man-.jpg'
-import Pizza from '../assets/image/heroPizza.jpg'
 
 const headerLinks: LinksType[] = [
     {href: 'https://github.com/Zoitber9', svgName: 'GitHub'},
@@ -153,6 +151,12 @@ export const state: StateType = {
                     img: LearningCardsImg,
                     description: 'Is a card bearing information, which is intended to be used as an aid in memorization. Flashcards are often used to memorize vocabulary, historical dates...',
                     href: '/'
+                },
+                {
+                    title: 'Typing test',
+                    img: typingTestImg,
+                    description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list...',
+                    href: 'https://todolist-rtk-chi.vercel.app/'
                 },
             ]
         },
