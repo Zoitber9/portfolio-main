@@ -155,8 +155,8 @@ export const state: StateType = {
                 {
                     title: 'Typing test',
                     img: typingTestImg,
-                    description: 'A list of things you need to do or want to do. When a task is completed, it is usually crossed off the list...',
-                    href: 'https://todolist-rtk-chi.vercel.app/'
+                    description: '',//TODO
+                    href: 'https://typing-test-ndk5.vercel.app/'
                 },
             ]
         },
